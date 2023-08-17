@@ -22,6 +22,8 @@ public class Task {
   @Enumerated(EnumType.STRING)
   private Priority priority;
 
+  public Task() {}
+
   public Task(String name, Priority priority) {
     this.name = name;
     this.priority = priority;
@@ -31,12 +33,20 @@ public class Task {
     return id;
   }
 
+  public void setName(String name) {
+    this.name = name;
+  }
+
   public String getName() {
     return name;
   }
 
   public boolean isDone() {
     return done;
+  }
+
+  public void setDone(boolean done) {
+    this.done = done;
   }
 
   public Instant getCreated() {

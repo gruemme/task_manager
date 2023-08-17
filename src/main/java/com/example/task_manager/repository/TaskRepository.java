@@ -4,5 +4,5 @@ import com.example.task_manager.model.Task;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TaskRepository extends JpaRepository<Task, Long> {
-    boolean existsByName(String name);
+  boolean existsByName(String name);
 }
