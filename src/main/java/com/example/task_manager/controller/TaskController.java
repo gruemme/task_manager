@@ -7,6 +7,11 @@ import com.example.task_manager.model.input.TaskCreationInput;
 import com.example.task_manager.repository.TaskRepository;
 import java.util.Objects;
 import java.util.Optional;
+import org.springdoc.core.annotations.ParameterObject;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -28,6 +33,17 @@ public class TaskController {
     }
 
     return taskOptional.get();
+  }
+
+  @GetMapping(path = "/tasks")
+  public Page<Task> getAllTasksPaged(
+      @ParameterObject
+          @PageableDefault(
+              sort = {"created", "id"},
+              direction = Sort.Direction.ASC,
+              value = 10)
+          Pageable pageable) {
+    return taskRepository.findAll(pageable);
   }
 
   @PostMapping(path = "/tasks")
