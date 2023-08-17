@@ -12,7 +12,7 @@
 	<artifactId>task_manager</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>task_manager</name>
-	<description>Simple demo project managing tasks in Spring Boot</description>
+	<description>Simple demo project for managing tasks in Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
