@@ -42,11 +42,14 @@ public class TaskController {
   @PatchMapping(path = "/tasks/{id}")
   @ResponseStatus(HttpStatus.CREATED)
   public Task modifyTask(@PathVariable Long id, @RequestBody ModifyInput taskInput) {
-    verifyInputName(taskInput);
-
     Task taskToModify = getTaskById(id);
-    taskToModify.setName(taskInput.name());
-    taskToModify.setDone(taskInput.done());
+    if (taskInput.done() != null) {
+      taskToModify.setDone(taskInput.done());
+    }
+    if (!Objects.isNull(taskInput.name())) {
+      verifyInputName(taskInput);
+      taskToModify.setName(taskInput.name());
+    }
 
     return taskRepository.save(taskToModify);
   }
