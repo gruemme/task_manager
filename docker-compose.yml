@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  task_manager-db:
+    image: "postgres:15.3-alpine"
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - task_manager_db_data:/var/lib/postgresql/data
+    environment:
+      - LANG=de_DE.utf8
+      - TZ=Europe/Berlin
+      - PGTZ=Europe/Berlin
+      - POSTGRES_INITDB_ARGS=--locale-provider=icu --icu-locale=de-DE
+      - POSTGRES_DB=task_manager_db
+      - POSTGRES_USER=task_manager_db_user
+      - POSTGRES_PASSWORD=passw0rd
+
+volumes:
+  task_manager_db_data: {}
