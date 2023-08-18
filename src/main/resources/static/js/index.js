@@ -40,7 +40,7 @@ function renderPagination(currentPage, data) {
             <a class="page-link" ${data.first ? '' : 'href="index.html?page='+ (currentPage - 1) + '"'}>Previous</a>
     </li>`;
     for (let i = 0; i < data.totalPages; ++i) {
-        paginationFragment += `<li class="page-item"><a class="page-link" href="index.html?page=${i}">${i + 1}</a></li>`;
+        paginationFragment += `<li class="page-item"><a class="page-link ${i == currentPage ? 'disabled' : ''}" ${i != currentPage ? 'href="index.html?page=' + i + '"' : ''}>${i + 1}</a></li>`;
     }
     paginationFragment += `<li class="page-item ${data.last ? 'disabled' : ''}">
             <a class="page-link" ${data.last ? '' : 'href="index.html?page='+ (+currentPage + 1) + '"'}>Next</a>
