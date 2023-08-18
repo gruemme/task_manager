@@ -7,7 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 @Entity
 public class Task {
   @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   @Column(nullable = false, unique = true)
