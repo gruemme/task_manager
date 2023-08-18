@@ -56,7 +56,6 @@ public class TaskController {
   }
 
   @PatchMapping(path = "/tasks/{id}")
-  @ResponseStatus(HttpStatus.CREATED)
   public Task modifyTask(@PathVariable Long id, @RequestBody ModifyInput taskInput) {
     Task taskToModify = getTaskById(id);
     if (taskInput.done() != null) {
