@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Simple Task Manager - Create Task</title>
+    <link href="lib/bootstrap-5.3.0-dist/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="p-5 bg-primary text-center">
+        <h1 id="title">Create Task</h1>
+    </div>
+    <hr/>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item" id="indexLink">
+                    <a class="nav-link" href="index.html">Tasks</a>
+                </li>
+                <li class="nav-item" id="createLink">
+                    <a class="nav-link active" href="create.html">Create Task</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="container mt-5">
+        <div class="form-group" id="inputData">
+            <div class="row">
+                <div class="col-sm-6 form-label">
+                    <label for="inputName">Name:</label>
+                </div>
+                <div class="col-sm-6">
+                    <input class="form-control input-lg" id="inputName" type="text"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Priority:</label>
+                </div>
+                <div class="col-sm-6">
+                    <input autocomplete="off" checked class="btn-check" id="priority-low" name="priority" type="radio">
+                    <label class="btn" for="priority-low">LOW</label>
+                    <input autocomplete="off" class="btn-check" id="priority-normal" name="priority" type="radio">
+                    <label class="btn" for="priority-normal">NORMAL</label>
+                    <input autocomplete="off" class="btn-check" id="priority-urgent" name="priority" type="radio">
+                    <label class="btn" for="priority-urgent">URGENT</label>
+                </div>
+            </div>
+            <div>
+                <input class="btn btn-primary" onclick="createTask()" type="button"
+                       value="Create"/>
+            </div>
+        </div>
+        <div class="form-group" id="errorMessage">
+        </div>
+    </div>
+</main>
+<script src="js/create.js" type="application/javascript"></script>
+<script src="lib/bootstrap-5.3.0-dist/bootstrap.bundle.min.js"></script>
+</body>
+</html>
