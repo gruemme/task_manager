@@ -5,6 +5,17 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Simple Task Manager - Create Task</title>
     <link href="webjars/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="importmap">
+        // https://stackoverflow.com/questions/71621907/trying-to-add-the-lit-js-framework-to-an-existing-spring-boot-project-via-webjar
+        {
+             "imports": {
+                 "lit": "/webjars/lit/index.js",
+                 "@lit/reactive-element": "/webjars/lit__reactive-element/reactive-element.js",
+                 "lit-html": "/webjars/lit-html/lit-html.js",
+                 "lit-element/lit-element.js": "/webjars/lit-element/lit-element.js"
+             }
+        }
+    </script>
     <script type="module" src="./lib/component/nav-bar.js"></script>
 </head>
 <body>

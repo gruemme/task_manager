@@ -1,6 +1,5 @@
-import {html, LitElement} from 'https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js';
-
-// https://stackoverflow.com/questions/71621907/trying-to-add-the-lit-js-framework-to-an-existing-spring-boot-project-via-webjar
+import {LitElement} from '/webjars/lit-element/lit-element.js';
+import {html} from '/webjars/lit/html.js';
 
 export class TaskItem extends LitElement {
     static properties = {

@@ -1,4 +1,5 @@
-import {html, LitElement} from 'https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js';
+import {LitElement} from '/webjars/lit-element/lit-element.js';
+import {html} from '/webjars/lit/html.js';
 
 export class NavBar extends LitElement {
     static properties = {
