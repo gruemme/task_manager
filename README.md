@@ -1,7 +1,7 @@
 # Simple Task Manager
 
 This is just a simple task manager software (aka TODO App) as a small tech demo demonstrating Spring Boot 3.1
-with PostgresSQL, Vanilla JavaScript using the fetch api and Bootstrap. 
+with PostgresSQL, Vanilla JavaScript using the fetch API, Web-Components, lit-HTML and Bootstrap. 
 
 ## How to Get Started
 
